@@ -1,5 +1,4 @@
 "use strict";
-// AI-assisted draft; adapt and disclose assistance in accordance with course policy.
 // Reference: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 const aboutButton = document.getElementById("about-button");
 const moreAbout = document.getElementById("more-about");
