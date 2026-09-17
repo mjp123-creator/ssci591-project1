@@ -18,9 +18,12 @@ aboutButton.addEventListener("click", toggleAbout);
 // Library usage adapted from https://leafletjs.com/examples/quick-start/.
 // USC coordinates come from the Week 1 classroom demo, not a personal location claim.
 const USC = [34.0224, -118.2851];
+// Representative point in Shunde, not a residential address.
+// Source: https://maps.apple.com/place?auid=1117349206072835&lsp=57879
+const HOME = [22.80541, 113.29320];
 const mapStatus = document.getElementById("map-status");
 const resetButton = document.getElementById("reset-map");
-const overviewButton = document.getElementById("overview-map");
+const homeButton = document.getElementById("home-map");
 
 if (typeof L === "undefined") {
   mapStatus.textContent = "The map library could not load. Check your internet connection and reload. The profile and introduction button still work.";
@@ -37,15 +40,17 @@ if (typeof L === "undefined") {
     mapStatus.textContent = "Some map tiles could not load. Check your connection, then reload the page.";
   });
   tiles.on("load", function () {
-    if (!tileFailed) mapStatus.textContent = "Map ready. Drag to explore, use + / − to zoom, or select the USC marker.";
+    if (!tileFailed) mapStatus.textContent = "Map ready. Drag to explore, use + / − to zoom, or select a location marker.";
   });
   tiles.addTo(map);
   L.marker(USC, { alt: "University of Southern California", title: "USC" })
     .addTo(map).bindPopup("University of Southern California — course reference location.");
-  overviewButton.disabled = false;
-  overviewButton.addEventListener("click", function () {
-    map.setView(USC, 11);
-    mapStatus.textContent = "Showing Los Angeles around USC.";
+  L.marker(HOME, { alt: "Shunde, Foshan", title: "My hometown" })
+    .addTo(map).bindPopup("My hometown: Shunde, Foshan, Guangdong, China.");
+  homeButton.disabled = false;
+  homeButton.addEventListener("click", function () {
+    map.setView(HOME, 12);
+    mapStatus.textContent = "Showing my hometown: Shunde, Foshan, China.";
   });
   resetButton.disabled = false;
   resetButton.addEventListener("click", function () {

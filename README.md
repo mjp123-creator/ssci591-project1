@@ -9,8 +9,8 @@ A personal webpage for **Jiapei Mei**, developed for SSCI 591: Web & Mobile GIS,
 
 - Personal introduction, portrait, learning goals, and an interests table.
 - A **More about me / Show less** button that expands or collapses additional information and updates visible text.
-- A Leaflet map centered on the University of Southern California, with an OpenStreetMap basemap and a clickable USC marker.
-- **Show Los Angeles** and **Back to USC** buttons that change the map zoom level while retaining USC as the center.
+- A Leaflet map centered on the University of Southern California, with an OpenStreetMap basemap and clickable markers for USC and Shunde, Foshan.
+- **Take me home** and **Back to USC** buttons that switch between Shunde, Foshan and USC.
 - Responsive layout for desktop and phone widths.
 - Image alternative text, keyboard focus indicators, a skip link, and accessible expansion and status attributes.
 - Status messages for missing map-library resources or failed map tiles.
@@ -81,7 +81,7 @@ This interaction demonstrates a function, JavaScript string output, and an event
 
 ### Map
 
-The initial center is `[34.0224, -118.2851]`, using latitude followed by longitude. The initial zoom is `14`; the Los Angeles overview uses zoom `11`. These coordinates come from the classroom demo and identify USC, not the author's home address.
+The initial center is `[34.0224, -118.2851]`, using latitude followed by longitude. The initial zoom is `14`; the hometown view uses zoom `12`. These coordinates come from the classroom demo and identify USC, not the author's home address. The hometown marker uses `[22.80541, 113.29320]`, a representative point in Shunde, Foshan, based on [Apple Maps](https://maps.apple.com/place?auid=1117349206072835&lsp=57879).
 
 Mouse-wheel zoom is intentionally disabled so scrolling the page does not unexpectedly zoom the map. The map's **+ / −** controls remain available. The return-to-USC interaction respects the browser's reduced-motion preference.
 
@@ -141,7 +141,7 @@ Repeat these checks after relevant changes and again on the published site:
 | Use Tab and activate a focused button | Focus is visible and the control responds |
 | Load the map | Basemap, USC marker, zoom controls, and attribution appear |
 | Select the USC marker | A popup identifies the location |
-| Select Show Los Angeles | A wider area around USC is shown |
+| Select Take me home | Shunde, Foshan is shown; its marker opens a hometown popup |
 | Select Back to USC | The view returns to the initial campus zoom |
 | Check phone and desktop widths | Main content fits without horizontal scrolling |
 | Open browser developer tools | Check Console for errors and Network for failed requests |
@@ -162,7 +162,7 @@ The latest review in the development conversation verified the deployed portrait
 
 ## Limitations and Possible Improvements
 
-- The map currently contains only the USC reference marker.
+- The map contains two markers: USC and a representative point in Shunde, Foshan.
 - Map functionality depends on external network resources.
 - Potential future additions include basketball-court or movie-theater locations; these datasets and features have not been implemented.
 - The course report and Brightspace submission are separate deliverables. This README does not replace the required report.
