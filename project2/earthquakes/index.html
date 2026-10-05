@@ -1,1 +1,29 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Global Earthquake Explorer | Jiapei Mei</title><link rel="stylesheet" href="style.css"></head><body><header><p>Jiapei Mei · SSCI 591 Project 2</p><h1>Global Earthquake Explorer</h1><p>Explore the locations and magnitudes of earthquakes reported by USGS during a seven-day window. Filter the map and inspect individual events to see their time, depth, and source details.</p><p>Static snapshot generated October 4, 2026 at 19:51:31 UTC. This is an educational overview, not a live alert or risk forecast.</p></header><main><p><strong>How to use:</strong> Click a magnitude bar to filter the map and count. Click the selected bar again to clear it. Select a map point for event details. Use the map legend, zoom buttons, and home button to explore.</p><p id="pending">ArcGIS publication is pending. <a href="preview.html">Open the working data preview</a>.</p><iframe id="app" title="Global Earthquake Explorer ArcGIS Dashboard" hidden allowfullscreen></iframe><p><a id="direct" hidden target="_blank" rel="noopener">Open Dashboard in a new tab</a></p></main><footer><p>Data: <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS Earthquake Hazards Program</a>. Downloaded and processed for this project. Magnitude and location estimates can be revised.</p><a href="data/earthquakes.csv">Data CSV</a> · <a href="data/metadata.json">Source and processing details</a></footer><script src="config.js"></script><script src="embed.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global Earthquake Explorer | Jiapei Mei</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <p>Jiapei Mei · SSCI 591 Project 2</p>
+    <h1>Global Earthquake Explorer</h1>
+    <p>Explore the locations and magnitudes of earthquakes reported by USGS during a seven-day window. Filter the map and inspect individual events to see their time, depth, and source details.</p>
+    <p>Static snapshot generated October 4, 2026 at 19:51:31 UTC. This is an educational overview, not a live alert or risk forecast.</p>
+  </header>
+  <main>
+    <p><strong>How to use:</strong> Click a magnitude bar to filter the map and count. Click the selected bar again to clear it. Select a map point for event details. Use the map legend, zoom buttons, and home button to explore.</p>
+    <p id="status">Loading the Dashboard. If it does not appear, use the link below.</p>
+    <iframe id="app" title="Global Earthquake Explorer ArcGIS Dashboard" hidden allowfullscreen></iframe>
+    <p><a id="direct" href="https://www.arcgis.com/apps/dashboards/2e0b3c22e92445f4ac493915b46173cc" target="_blank" rel="noopener">Open Dashboard in a new tab</a></p>
+    <noscript><p>Enable JavaScript to show the embedded map, or open the Dashboard using the link above.</p></noscript>
+  </main>
+  <footer>
+    <p>Data: <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">USGS Earthquake Hazards Program</a>. Downloaded and processed for this project. Magnitude and location estimates can be revised.</p>
+    <p><a href="https://www.arcgis.com/home/item.html?id=8c39b77313dd4aab8fdcdc3d57cd8c50">Published earthquake data</a></p>
+  </footer>
+</body>
+</html>

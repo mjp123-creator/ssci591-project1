@@ -34,24 +34,24 @@ Maximum magnitude: 5.9. Event times span September 27, 2026, 20:49:20 UTC to Oct
 ## Files
 
 - `data/usgs_original.geojson`: archived source.
-- `prepare.py`: reproducible validation and transformation.
+- `development/prepare.py`: reproducible validation and transformation.
 - `data/earthquakes.geojson`: publish this as a hosted feature layer.
 - `data/earthquakes.csv`: equivalent tabular export.
 - `data/metadata.json`: counts, exclusions, source URL, timestamps, and source checksum.
-- `preview.html`, `preview.js`: local interactive preview.
-- `index.html`, `config.js`, `embed.js`: final Dashboard embedding page.
+- `development/preview.html`, `development/preview.js`: local interactive preview.
+- `index.html`, `style.css`, `app.js`: final Dashboard embedding page.
 - `evidence/`: publication and test screenshots when available.
 
 ## Run locally
 
 From the repository root, run `python3 -m http.server 8592`, then open:
-http://127.0.0.1:8592/project2/earthquakes/preview.html
+http://127.0.0.1:8592/project2/earthquakes/development/preview.html
 
 The preview needs an internet connection for Leaflet and map tiles. It supports minimum-magnitude filtering, statistics, event selection, and resetting the map extent.
 
 ## Deployment
 
-Publish this folder on GitHub Pages with `index.html` as the entry point. `config.js` contains the public Dashboard URL. No build process or authentication is required. The application depends on ArcGIS Online and an internet connection. The Dashboard is designed primarily for desktop use.
+Publish this folder on GitHub Pages with `index.html` as the entry point. `app.js` contains the public Dashboard URL. No build process or authentication is required. The application depends on ArcGIS Online and an internet connection. The Dashboard is designed primarily for desktop use.
 
 ## Limitations
 
@@ -71,3 +71,5 @@ AI assistance was used for data preparation code, the local preview, documentati
 https://mjp123-creator.github.io/ssci591-project1/project2/earthquakes/
 
 GitHub Pages deployment succeeded. The public HTML page and embedded Dashboard loaded without signing in, displaying 319 events.
+
+The website requires only index.html, style.css, and app.js locally. ArcGIS hosts the Dashboard and data; an internet connection is required. The remaining files are supporting data, documentation, and development assets.

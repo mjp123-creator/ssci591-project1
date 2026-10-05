@@ -2,7 +2,7 @@
 import csv,json,math,hashlib
 from pathlib import Path
 from datetime import datetime,timezone
-P=Path(__file__).parent/'data'
+P=Path(__file__).parent.parent/'data'
 raw=(P/'usgs_original.geojson').read_bytes(); src=json.loads(raw)
 def utc(ms): return datetime.fromtimestamp(ms/1000,timezone.utc).isoformat(timespec='seconds').replace('+00:00','Z')
 rows=[];seen=set(); removed={}
