@@ -57,3 +57,9 @@ U.S. Geological Survey. (n.d.-b). *Latest earthquakes*. Earthquake Hazards Progr
 ## Assistance disclosure
 
 AI assistance was used to help prepare the processing script, local preview, documentation, and this report draft. The final report must accurately describe the application that was published and the tests that were actually performed.
+
+## Published website
+
+https://mjp123-creator.github.io/ssci591-project1/project2/earthquakes/
+
+GitHub Pages deployment succeeded. The public HTML page and embedded Dashboard loaded without signing in, displaying 319 events.

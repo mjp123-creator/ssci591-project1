@@ -65,3 +65,9 @@ This is a static snapshot, not an alert service. Short-term earthquake counts do
 - Preview basemap: OpenStreetMap contributors, https://www.openstreetmap.org/copyright
 
 AI assistance was used for data preparation code, the local preview, documentation, and drafting. Publication and testing status must reflect actual completed work.
+
+## Published website
+
+https://mjp123-creator.github.io/ssci591-project1/project2/earthquakes/
+
+GitHub Pages deployment succeeded. The public HTML page and embedded Dashboard loaded without signing in, displaying 319 events.

@@ -9,3 +9,5 @@
 - Reload restored initial 319.
 - Dashboard configured in native Chrome. Dedicated mobile layout and Safari/Firefox tests not completed.
 - Public HTML deployment verification recorded separately after publishing.
+
+- GitHub Pages build succeeded; public HTML and its embedded Dashboard loaded with 319 events. Evidence: published-website.png.
